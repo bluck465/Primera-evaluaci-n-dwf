@@ -1,0 +1,13 @@
+/* Minimal placeholder styles. Tailwind CDN is used in index.html for utility classes. */
+:root {
+  --bg: #FAFAFA;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Small helper to keep visuals while migrating components */
+body {
+  background: var(--bg);
+}
