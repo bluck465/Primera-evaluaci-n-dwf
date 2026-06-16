@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { fetchProducts, PRODUCTOS_MOCK } from './api.js';
+import useFavorites from './hooks/useFavorites.js';
 import Header from './components/Header.jsx';
 import ScenarioPanel from './components/ScenarioPanel.jsx';
 import CategoryFilters from './components/CategoryFilters.jsx';
@@ -22,6 +23,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [activeProduct, setActiveProduct] = useState(null);
+
+  const { favorites, toggleFavorite, favoriteCount } = useFavorites();
 
   const addLog = (message, type = 'info') => {
     setLogs(previous => [{ time: new Date().toLocaleTimeString(), message, type }, ...previous]);
@@ -99,6 +102,7 @@ function App() {
           searchTerm={searchTerm}
           onSearchChange={setSearchTerm}
           onRefresh={loadProducts}
+          favoriteCount={favoriteCount}
         />
       </header>
 
@@ -184,6 +188,8 @@ function App() {
                     product={product}
                     onAddToCart={addToCart}
                     onViewDetails={openProductModal}
+                    isFavorite={favorites.includes(product.id)}
+                    onToggleFavorite={toggleFavorite}
                   />
                 ))}
               </div>

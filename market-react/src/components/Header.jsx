@@ -1,4 +1,4 @@
-export default function Header({ searchTerm, onSearchChange, onRefresh }) {
+export default function Header({ searchTerm, onSearchChange, onRefresh, favoriteCount }) {
   return (
     <>
       <div className="header-top">
@@ -10,6 +10,9 @@ export default function Header({ searchTerm, onSearchChange, onRefresh }) {
           </div>
         </div>
         <span className="badge">API-READY</span>
+        <span style={{ color: '#fbbf24', fontWeight: 700, fontSize: '0.95rem' }}>
+          ★ {favoriteCount}
+        </span>
       </div>
 
       <div className="search-row">

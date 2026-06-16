@@ -1,4 +1,4 @@
-export default function ProductCard({ product, onAddToCart, onViewDetails }) {
+export default function ProductCard({ product, onAddToCart, onViewDetails, isFavorite, onToggleFavorite }) {
   const price = typeof product.price === 'number' ? product.price.toFixed(2) : product.price || '0.00';
   const description = product.description || 'Descripción no disponible.';
   const summary = description.length > 90 ? `${description.slice(0, 90)}...` : description;
@@ -21,6 +21,10 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }) {
           <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
             <button className="button small" type="button" onClick={() => onAddToCart(product.id)}>Comprar</button>
             <button className="button text-button" type="button" onClick={() => onViewDetails(product.id)}>Más...</button>
+            <button className="button text-button" type="button" onClick={() => onToggleFavorite(product.id)}
+              style={{ fontSize: '1.3rem', lineHeight: 1, color: isFavorite ? '#fbbf24' : '#64748b' }}>
+              {isFavorite ? '★' : '☆'}
+            </button>
           </div>
         </div>
       </div>
