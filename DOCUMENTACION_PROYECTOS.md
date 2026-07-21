@@ -14,7 +14,7 @@ Este documento resume cada carpeta/proyecto presente en la raíz del workspace y
 - **Qué hace**: interfaz para filtrar y mostrar jugadores, abrir modal de paquetes y visualizar stickers por equipo.
 - **Qué hice yo (acciones inferidas)**: configuraste Vite y `package.json`, creaste componentes React, añadiste los datos de jugadores y estilos.
 
-**documentacion**:
+**paginadeprueba**:
 - **Descripción**: Proyecto de ejemplo o portafolio con catálogo de productos (probablemente Vite + React).
 - **Archivos clave**: [documentacion/index.html](documentacion/index.html), [documentacion/src/App.jsx](documentacion/src/App.jsx), [documentacion/src/main.jsx](documentacion/src/main.jsx)
 - **Componentes**: `CartDrawer`, `CartItem`, `Catalog`, `CategoryFilters`, `Footer`, `Header`, `Hero`, `ProductCard`, `SearchBar` en [documentacion/src/components](documentacion/src/components)
