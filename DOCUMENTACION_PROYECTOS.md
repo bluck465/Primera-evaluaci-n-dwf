@@ -14,7 +14,7 @@ Este documento resume cada carpeta/proyecto presente en la raíz del workspace y
 - **Qué hace**: interfaz para filtrar y mostrar jugadores, abrir modal de paquetes y visualizar stickers por equipo.
 - **Qué hice yo (acciones inferidas)**: configuraste Vite y `package.json`, creaste componentes React, añadiste los datos de jugadores y estilos.
 
-**documentacion**:
+**paginadeprueba**:
 - **Descripción**: Proyecto de ejemplo o portafolio con catálogo de productos (probablemente Vite + React).
 - **Archivos clave**: [documentacion/index.html](documentacion/index.html), [documentacion/src/App.jsx](documentacion/src/App.jsx), [documentacion/src/main.jsx](documentacion/src/main.jsx)
 - **Componentes**: `CartDrawer`, `CartItem`, `Catalog`, `CategoryFilters`, `Footer`, `Header`, `Hero`, `ProductCard`, `SearchBar` en [documentacion/src/components](documentacion/src/components)
@@ -51,11 +51,4 @@ Este documento resume cada carpeta/proyecto presente en la raíz del workspace y
 - **Qué hace**: implementación con separación de responsabilidades, contexto para el carrito y hooks reutilizables.
 - **Qué hice yo (acciones inferidas)**: refactorizaste la app para usar contexto, extraí la lógica en hooks y servicios, y limpiaste componentes para mayor reuso.
 
----
 
-Nota sobre "Qué hice yo": las acciones listadas son inferidas automáticamente a partir de los archivos y la estructura del proyecto. Si prefieres, puedo:
-
-- Actualizar cada sección con descripciones exactas basadas en commits o tu input.
-- Generar un `README.md` por cada proyecto con instrucciones para ejecutar, pruebas y scripts.
-
-Indica cómo quieres proceder.
